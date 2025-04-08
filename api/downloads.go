@@ -24,7 +24,7 @@ type DownloadResponse struct {
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	client := &http.Client{}
-	req, err := http.NewRequest("GET", "https://zed.dev/api/extensions?maxSchemaVersion=1", nil)
+	req, err := http.NewRequest("GET", "https://zed.dev/api/extensions?maxSchemaVersion=1&include_native=true", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
